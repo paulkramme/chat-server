@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	bind(listen_fd, (struct sockaddr *) &servaddr, sizeof(servaddr));
 	listen(listen_fd, 10);
 	comm_fd = accept(listen_fd, (struct sockaddr*) NULL, NULL);
-	while(1)
+	for(;;)
 	{
 		memset(server_read, '\0', 256);
 		if(read(comm_fd, server_read, 256) == -1)
