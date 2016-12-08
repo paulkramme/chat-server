@@ -7,7 +7,7 @@
 #include<netdb.h>
 #include<string.h>
 
-#define PERMS 0666
+#define PERMISSION 0666
 
 
 int main(int argc, char **argv)
@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	char server_normal_shutdown[] = "SERVER_NORMAL_SHUTDOWN\n";
 	puts("Main chat server");
 	puts("Server socket should start here...");
-	logfile = open("chatserver.log", O_WRONLY | O_CREAT | O_APPEND, PERMS);
+	logfile = open("chatserver.log", O_WRONLY | O_CREAT | O_APPEND, PERMISSION);
 	write(logfile, "server startup\n", sizeof("server startup\n"));	
 	char server_input[256];
 	char server_read[256];
