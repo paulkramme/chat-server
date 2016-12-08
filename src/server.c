@@ -10,7 +10,7 @@
 #define PERMISSION 0666
 
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int logfile;
 	char server_crash_not_received[] = "Server did not receive any packages, therefore return 1.\n";
