@@ -1,2 +1,2 @@
 all:
-	gcc src/server.c -o chatserver
+	clang -Weverything src/server.c -o chatserver
